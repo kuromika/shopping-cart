@@ -1,9 +1,11 @@
 import React from "react";
 
-const Shop = () => {
+const Shop = (props) => {
     return (
         <>
-            <h1>Shop Component</h1>
+            <h2>Our Products</h2>
+            <div class="grid shop">
+            </div>
         </>
     )
 }
