@@ -12,12 +12,19 @@ const CartItem = (props) => {
             props.add(props.id);
         }
 
+        const handleRemove = (e) => {
+            props.remove(props.id);
+        }
+
         const addElement = addButton.current;
+        const removeElement = removeButton.current;
 
         addElement.addEventListener('click', handleAdd);
+        removeElement.addEventListener('click', handleRemove);
 
         return () => {
             addElement.removeEventListener('click', handleAdd);
+            removeElement.removeEventListener('click', handleRemove);
         }
 
     }, [props]);
@@ -25,7 +32,7 @@ const CartItem = (props) => {
     return (
         <Item img={props.img} alt={props.alt} name={props.name} price={props.price}>
             <div className="cart-item-buttons">
-                <button type="button"> - </button>
+                <button type="button" ref={removeButton}> - </button>
                 <span>{props.quantity}</span>
                 <button type="button" ref={addButton}> + </button>
             </div>

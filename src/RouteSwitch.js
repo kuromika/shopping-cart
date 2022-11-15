@@ -35,6 +35,17 @@ const RouteSwitch = () => {
         }
         setCart( (prev) => [...prev, toAdd]);
     }
+
+    const removeCartItem = (id) => {
+        const index = cart.findIndex((item) => item.id === id);
+        const newCart = [...cart];
+        if (newCart[index].quantity === 1) {
+            newCart.splice(index, 1);
+        } else {
+            newCart[index].quantity -= 1;
+        }
+        setCart(newCart);
+    }
     
     return (
         <BrowserRouter>
@@ -42,8 +53,10 @@ const RouteSwitch = () => {
                 <Route path='/' element={<App/>}>
                     <Route index element={<Home/>} />
                     <Route path='home' element={<Home />} />
-                    <Route path='shop' element={<Shop products={products} add={addCartItem} />} />
-                    <Route path='cart' element={<Cart items={cart} add={addCartItem} />} /> 
+                    <Route path='shop' element={
+                        <Shop products={products} add={addCartItem} />} />
+                    <Route path='cart' element={
+                        <Cart items={cart} add={addCartItem} rm = {removeCartItem} />} /> 
                 </Route>
             </Routes>
         </BrowserRouter>

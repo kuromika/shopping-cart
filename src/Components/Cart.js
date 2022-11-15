@@ -15,7 +15,8 @@ const Cart = (props) => {
                         price={item.price}
                         id = {item.id}
                         quantity={item.quantity}
-                        add = {props.add}
+                        add={props.add}
+                        remove = {props.rm}
                     ></CartItem>)}
             </div>
             
