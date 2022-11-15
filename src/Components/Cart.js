@@ -13,7 +13,9 @@ const Cart = (props) => {
                         desc={item.desc}
                         name={item.title}
                         price={item.price}
+                        id = {item.id}
                         quantity={item.quantity}
+                        add = {props.add}
                     ></CartItem>)}
             </div>
             

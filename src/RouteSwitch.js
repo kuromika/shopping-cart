@@ -43,7 +43,7 @@ const RouteSwitch = () => {
                     <Route index element={<Home/>} />
                     <Route path='home' element={<Home />} />
                     <Route path='shop' element={<Shop products={products} add={addCartItem} />} />
-                    <Route path='cart' element={<Cart items={cart} />} /> 
+                    <Route path='cart' element={<Cart items={cart} add={addCartItem} />} /> 
                 </Route>
             </Routes>
         </BrowserRouter>
