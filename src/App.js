@@ -2,13 +2,13 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import Nav from "./Components/Nav";
 
-const App = () => {
+const App = (props) => {
   
   return (
     <>
       <header>
         <Link to='home'>Tica·α</Link>
-        <Nav/>
+        <Nav cartSize={props.cartSize} />
       </header>
 
       <main>

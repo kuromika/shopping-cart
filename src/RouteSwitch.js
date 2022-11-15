@@ -50,7 +50,7 @@ const RouteSwitch = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<App/>}>
+                <Route path='/' element={<App cartSize={cart.reduce( (a, b) => a + b.quantity, 0)} />}>
                     <Route index element={<Home/>} />
                     <Route path='home' element={<Home />} />
                     <Route path='shop' element={
