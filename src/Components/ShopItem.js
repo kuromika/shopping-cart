@@ -1,10 +1,12 @@
 import React from "react";
 import Item from "./Item";
 
-const ShopItem = () => {
+const ShopItem = (props) => {
 
     return (
-        <Item>
+        <Item img={props.img}
+            key={props.id} alt={props.desc}
+            name={props.name} price={props.price}>
             <button type="button"> add </button>
         </Item>
     )

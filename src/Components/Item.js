@@ -10,7 +10,7 @@ const Item = (props) => {
                     <span className="item-price">{props.price}</span>
                 </div>
             </div>
-            <Children></Children>
+            {props.children}
         </div>
     )
 }
