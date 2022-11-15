@@ -7,22 +7,28 @@
     font-family: 'Sono', sans-serif;
 }
 
-
+#root {
+    height: 100vh;
+}
 
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 3vh 3vw 3vh 3vw;
+    background-color: black;
 }
+
+
 
 main{
     padding: 2vw;
 }
 
 header > a {
+    color: white;
     font-size: 30px;
     text-decoration: none;
-    color: black;
     font-weight: 900;
 }
 
@@ -32,8 +38,8 @@ nav{
 }
 
 nav a{
+    color: white;
     text-decoration: none;
-    color: black;
     font-size: large;
 }
 
