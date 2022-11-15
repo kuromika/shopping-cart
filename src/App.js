@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import Nav from "./Components/Nav";
 
 const App = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch("https://fakestoreapi.com/products/category/men's clothing?limit=5&&sort=desc"
+      , controller.signal)
+      .then(res => res.json())
+      .then(json => setProducts(json));
+
+    return () => {
+      controller.abort();
+    }
+    
+  },[])
   
   return (
     <>
       <header>
-        <Link to='home'><h1>Tica·α</h1></Link>
+        <Link to='home'>Tica·α</Link>
         <Nav/>
       </header>
 
