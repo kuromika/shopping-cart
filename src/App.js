@@ -7,8 +7,7 @@ const App = () => {
 
   useEffect(() => {
     const controller = new AbortController();
-    fetch("https://fakestoreapi.com/products/category/men's clothing?limit=5&&sort=desc"
-      , controller.signal)
+    fetch("https://fakestoreapi.com/products", controller.signal)
       .then(res => res.json())
       .then(json => setProducts(json));
 
@@ -24,7 +23,7 @@ const App = () => {
         <Link to='home'>Tica·α</Link>
         <Nav/>
       </header>
-
+      
       <main>
         <Outlet/>
       </main>
