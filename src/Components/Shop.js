@@ -4,7 +4,6 @@ import ShopItem from "./ShopItem";
 const Shop = (props) => {
     return (
         <div className="shop">
-            <h2>Our Products</h2>
             <div className="grid">
                 {props.products.map((product) =>
                     <ShopItem

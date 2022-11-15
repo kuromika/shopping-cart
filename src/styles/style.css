@@ -37,4 +37,52 @@ nav a{
     font-size: large;
 }
 
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
 
+.shop .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.shop .item button{
+    width: 60%;
+    padding: 3px;
+    border-radius: 10px;
+    font-weight: 900;
+}
+
+.shop .item-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.shop .item-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.shop .item-price{
+    align-self: flex-end;
+    font-weight: 900;
+}
+
+.shop .item img{
+    width: 100px;
+    height: 100px;
+}
