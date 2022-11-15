@@ -86,3 +86,86 @@ nav a{
     width: 100px;
     height: 100px;
 }
+
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.cart .items{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.cart .item{
+    border-bottom: 1px solid black;
+}
+
+.cart .item,
+.cart .item  .item-details{
+    display: flex;
+    align-items: center;
+}
+
+.cart .item .item-details{
+    gap: 20px;
+}
+
+.cart .item {
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+}
+
+.cart .item .item-info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+.cart .item img{
+    width: 100px;
+    height: 100px;
+}
+
+.cart-item-buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: black;
+    color: white;
+}
+
+.cart-item-buttons button{
+    color: white;
+    padding: 5px;
+    background-color: black;
+    border: none;
+}
+
+.cart-item-buttons button:active{
+    background-color: red;
+}
+
+.cart .item .item-price{
+    font-weight: 900;
+}
+
+.checkout{
+    background-color: black;
+    padding: 30px;
+    color: white;
+}
+
+
+.cart-total{
+    font-weight: 900;
+}
