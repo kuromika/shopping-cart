@@ -67,6 +67,13 @@ nav a{
     padding: 3px;
     border-radius: 10px;
     font-weight: 900;
+    border: none;
+    background-color: black;
+    color:white
+}
+
+.shop .item button:active{
+    background-color: green;
 }
 
 .shop .item-details{
@@ -157,8 +164,12 @@ nav a{
     border: none;
 }
 
-.cart-item-buttons button:active{
+.cart .minus-item:active{
     background-color: red;
+}
+
+.cart .plus-item:active{
+    background-color: green;
 }
 
 .cart .item .item-price{
@@ -171,6 +182,10 @@ nav a{
     color: white;
 }
 
+
+.cart h2{
+    margin-top: 20px;
+}
 
 .cart-total{
     font-weight: 900;

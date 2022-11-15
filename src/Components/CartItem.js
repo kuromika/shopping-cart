@@ -32,9 +32,9 @@ const CartItem = (props) => {
     return (
         <Item img={props.img} alt={props.alt} name={props.name} price={props.price * props.quantity}>
             <div className="cart-item-buttons">
-                <button type="button" ref={removeButton}> - </button>
+                <button type="button" ref={removeButton} className='minus-item'> - </button>
                 <span>{props.quantity}</span>
-                <button type="button" ref={addButton}> + </button>
+                <button type="button" ref={addButton} className='plus-item'> + </button>
             </div>
         </Item>
     )
