@@ -23,7 +23,7 @@ const Cart = (props) => {
             <div className="checkout">
                 <div className="cart-total">
                     <span>Total: </span>
-                    <span>{props.total}</span>
+                    <span>{props.total.toFixed(2)}</span>
                 </div>
             </div>
         </div>
