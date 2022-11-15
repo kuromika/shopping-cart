@@ -30,7 +30,7 @@ const CartItem = (props) => {
     }, [props]);
 
     return (
-        <Item img={props.img} alt={props.alt} name={props.name} price={props.price}>
+        <Item img={props.img} alt={props.alt} name={props.name} price={props.price * props.quantity}>
             <div className="cart-item-buttons">
                 <button type="button" ref={removeButton}> - </button>
                 <span>{props.quantity}</span>

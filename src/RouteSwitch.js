@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { React, useState, useEffect } from 'react';
-import App from './App';
+import Layout from './Layout';
 import Home from './Components/Home';
 import Shop from './Components/Shop';
 import Cart from './Components/Cart';
@@ -50,7 +50,7 @@ const RouteSwitch = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<App cartSize={cart.reduce( (a, b) => a + b.quantity, 0)} />}>
+                <Route path='/' element={<Layout cartSize={cart.reduce( (a, b) => a + b.quantity, 0)} />}>
                     <Route index element={<Home/>} />
                     <Route path='home' element={<Home />} />
                     <Route path='shop' element={
