@@ -22,7 +22,17 @@ const RouteSwitch = () => {
     }, []);
 
     const addCartItem = (id) => {
-        const toAdd = products.find((product) => product.id === id);
+        const index = cart.findIndex((item) => item.id === id);
+        if (index !== -1) {
+            const newArr = [...cart];
+            newArr[index].quantity += 1;
+            setCart(newArr);
+            return;
+        }
+        const toAdd = {
+            quantity: 1,
+            ...products.find((product) => product.id === id)
+        }
         setCart( (prev) => [...prev, toAdd]);
     }
     
