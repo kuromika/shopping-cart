@@ -2,11 +2,11 @@ import React from "react";
 
 const Shop = (props) => {
     return (
-        <>
+        <div className="shop">
             <h2>Our Products</h2>
-            <div class="grid shop">
+            <div class="grid">
             </div>
-        </>
+        </div>
     )
 }
 

@@ -1,10 +1,20 @@
 import React from "react";
 
-const Cart = () => {
+const Cart = (props) => {
     return (
-        <>
-            <h1>Cart component</h1>
-        </>
+        <div className="cart">
+            <h2>Your Cart</h2>
+            <div className="items">
+                {/* add cart items */}
+            </div>
+            
+            <div className="checkout">
+                <div className="cart-total">
+                    <span>Total: </span>
+                    <span>{props.total}</span>
+                </div>
+            </div>
+        </div>
     )
 }
 
