@@ -10,9 +10,11 @@ const Shop = (props) => {
                     <ShopItem
                         img={product.image}
                         key={product.id}
+                        id = {product.id}
                         name={product.title}
                         price={product.price}
                         desc={product.description}
+                        add = {props.add}
                     ></ShopItem>)}
             </div>
         </div>
