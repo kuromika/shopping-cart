@@ -2,7 +2,7 @@ import React from "react";
 
 const Item = (props) => {
     return (
-        <div className='item'>
+        <div className='item' role={props.role}>
             <div className="item-details">
                 <img src={props.img} alt={props.alt}></img>
                 <div className='item-info'>

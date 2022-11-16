@@ -30,10 +30,10 @@ const CartItem = (props) => {
     }, [props]);
 
     return (
-        <Item img={props.img} alt={props.alt} name={props.name} price={props.price * props.quantity}>
+        <Item img={props.img} alt={props.alt} name={props.name} price={props.price * props.quantity} role='listitem'>
             <div className="cart-item-buttons">
                 <button type="button" ref={removeButton} className='minus-item'> - </button>
-                <span>{props.quantity}</span>
+                <span aria-label="quantity">{props.quantity}</span>
                 <button type="button" ref={addButton} className='plus-item'> + </button>
             </div>
         </Item>

@@ -5,7 +5,7 @@ const Cart = (props) => {
     return (
         <div className="cart">
             <h2>Your Cart</h2>
-            <div className="items">
+            <div className="items" role='list'>
                 {props.items.length === 0 ? <h1> Add items to your cart</h1> :
                     props.items.map( (item) => 
                         <CartItem
