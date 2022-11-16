@@ -4,7 +4,7 @@ import ShopItem from "./ShopItem";
 const Shop = (props) => {
     return (
         <div className="shop">
-            <div className="grid">
+            <div className="grid" role='grid'>
                 {props.products.map((product) =>
                     <ShopItem
                         img={product.image}
