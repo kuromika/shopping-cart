@@ -48,7 +48,7 @@ const RouteSwitch = () => {
     }
     
     return (
-        <BrowserRouter>
+        <BrowserRouter basename='shopping-cart'>
             <Routes>
                 <Route path='/' element={<Layout
                     cartSize={cart.reduce((a, b) => a + b.quantity, 0)} />}>
