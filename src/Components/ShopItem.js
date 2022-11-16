@@ -23,7 +23,7 @@ const ShopItem = (props) => {
 
     return (
         <Item img={props.img} alt={props.desc}
-            name={props.name} price={props.price}>
+            name={props.name} price={props.price} role='gridcell'>
             <button type="button" ref={ref}> add to cart </button>
         </Item>
     )
